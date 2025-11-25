@@ -1,10 +1,5 @@
 # xpandr
 
-> Expand short triggers into full shell commands right in your shell prompt.  
-> Go core, Zsh & Bash glue, no daemon.
-
----
-
 ## What is xpandr?
 
 **xpandr** lets you type a short trigger at your shell prompt and have it expand into a full command when you hit <kbd>Space</kbd> or <kbd>Enter</kbd>.
@@ -14,6 +9,7 @@
 
 It’s like tiny command templates wired directly into your prompt — with shared triggers for **Zsh** and **Bash**.
 
+This tool is inspired by the excellent [zsh-abbr](https://github.com/olets/zsh-abbr).
 ---
 
 ## Features
