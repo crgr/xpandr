@@ -181,6 +181,7 @@ No triggers defined.
 
 ### Remove a trigger
 
+This is where <kbd>Ctrl+J</kbd> comes in handy:
 ```bash
 xpandr rm gc
 ```
