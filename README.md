@@ -49,11 +49,9 @@ This tool is inspired by the excellent [zsh-abbr](https://github.com/olets/zsh-a
 *  **Script-friendly output**
   `xpandr dump` emits `SHORT<TAB>EXPANSION` lines for the shell glue, while `xpandr list` is for humans.
 
----
 
 ## Demo
 
-(Imagine a GIF here.)
 
 ```console
 $ xpandr add gcm 'git commit -m "%|"'
@@ -63,11 +61,10 @@ $ gcm␣
 
 # Becomes:
 $ git commit -m ""
-                   ^
-                   cursor here
+                 ^
+                 cursor here
 ```
 
----
 
 ## Installation
 
@@ -87,7 +84,6 @@ go build -ldflags "-s -w" -o xpandr main.go
 mv xpandr /usr/local/bin   # or ~/.local/bin/ , etc.
 ```
 
----
 
 ## Shell integration
 
@@ -152,7 +148,7 @@ With the provided Zsh/Bash integrations:
 
 You can change these bindings inside `xpandr.zsh` or `xpandr.sh` if you want different combinations.
 
----
+
 
 ## Usage
 
@@ -197,7 +193,6 @@ xpandr dump
 # gcm<TAB>git commit -m "%|"
 ```
 
----
 
 ## Configuration & internals
 
