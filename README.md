@@ -14,39 +14,39 @@ This tool is inspired by the excellent [zsh-abbr](https://github.com/olets/zsh-a
 
 ## Features
 
-- **SHORT → expansion**  
+-  **SHORT → expansion**  
   Define a SHORT trigger and the command it should expand to.
 
-- **Scoped multi-word triggers**  
+-  **Scoped multi-word triggers**  
   SHORT can be a single word (`gc`) *or* two words (`git cm`). xpandr always prefers
   the longest match at the end of the line:
   - `xpandr add "git cm" 'git commit -m "%|"'`
   - `git cm␣` → `git commit -m ""`
   - `cm␣` alone does nothing (unless you also define `cm`)
 
-- **Cursor markers**  
+-  **Cursor markers**  
   Use `%|` in an expansion to control where the cursor lands after expansion:
   ```bash
   xpandr add gcm 'git commit -m "%|"'
-````
+```
 
-* **No daemon**
+*  **No daemon**
   No background service. xpandr runs as a regular CLI; shell integrations call it on demand and/or load triggers into memory.
 
-* **Simple file format**
+*  **Simple file format**
   Triggers are stored as a flat JSON object under:
 
   ```text
   ${XDG_CONFIG_HOME:-$HOME/.config}/xpandr/triggers.json
   ```
 
-* **First-class Zsh & Bash support**
+*  **First-class Zsh & Bash support**
   Thin integration scripts:
 
   * `xpandr.zsh` for Zsh (ZLE widgets, `$LBUFFER` / `$RBUFFER`)
   * `xpandr.sh` for Bash (Readline hooks, `READLINE_LINE` / `READLINE_POINT`)
 
-* **Script-friendly output**
+*  **Script-friendly output**
   `xpandr dump` emits `SHORT<TAB>EXPANSION` lines for the shell glue, while `xpandr list` is for humans.
 
 ---
